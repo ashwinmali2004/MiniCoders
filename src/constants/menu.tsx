@@ -1,9 +1,12 @@
+import { Aichat } from '@/icons/ai-icon'
 import CalIcon from '@/icons/cal-icon'
 import ChatIcon from '@/icons/chat-icon'
 import DashboardIcon from '@/icons/dashboard-icon'
+import DatabaseIcon from '@/icons/database-icon'
 import EmailIcon from '@/icons/email-icon'
 import HelpDeskIcon from '@/icons/help-desk-icon'
 import IntegrationsIcon from '@/icons/integrations-icon'
+import SearchSvg from '@/icons/search-icon'
 import SettingsIcon from '@/icons/settings-icon'
 import StarIcon from '@/icons/star-icon'
 import TimerIcon from '@/icons/timer-icon'
@@ -19,6 +22,21 @@ export const SIDE_BAR_MENU: SIDE_BAR_MENU_PROPS[] = [
     label: 'Dashboard',
     icon: <DashboardIcon />,
     path: 'dashboard',
+  },
+  {
+    label: 'DataQueryAi',
+    icon: <DatabaseIcon />,
+    path: 'dataQueryAi',
+  },
+  {
+    label: 'Search',
+    icon: <SearchSvg />,
+    path: 'search',
+  },
+  {
+    label: 'Smart Query',
+    icon: <Aichat />,
+    path: 'smartquery',
   },
   {
     label: 'Conversations',

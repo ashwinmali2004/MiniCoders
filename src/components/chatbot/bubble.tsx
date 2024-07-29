@@ -27,9 +27,9 @@ const Bubble = ({ message, createdAt }: Props) => {
       )}
     >
       {message.role == 'assistant' ? (
-        <Avatar className="w-5 h-5">
+        <Avatar className="w-7 h-7">
           <AvatarImage
-            src="https://ucarecdn.com/372078a2-48f5-4700-ba0b-d06003d02a53/-/preview/512x512/"
+            src="./images/piyush.jpg"
             alt="@shadcn"
           />
           <AvatarFallback>CN</AvatarFallback>
@@ -46,7 +46,7 @@ const Bubble = ({ message, createdAt }: Props) => {
           'flex flex-col gap-3 min-w-[200px] max-w-[300px] p-4 rounded-t-md',
           message.role == 'assistant'
             ? 'bg-muted rounded-r-md'
-            : 'bg-grandis rounded-l-md'
+            : 'bg-cyan-200 rounded-l-md'
         )}
       >
         {createdAt ? (

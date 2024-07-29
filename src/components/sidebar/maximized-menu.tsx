@@ -22,7 +22,7 @@ type Props = {
 const MaxMenu = ({ current, domains, onExpand, onSignOut }: Props) => {
   return (
     <div className="px-2 flex flex-col h-full">
-      <div className="flex justify-between items-center -ml-5">
+      <div className="flex justify-between items-center mt-2">
         <Image
           src="/logo.png"
           alt="LOGO"
@@ -36,9 +36,9 @@ const MaxMenu = ({ current, domains, onExpand, onSignOut }: Props) => {
           height={0}
         />
         <Link href="/">
-        <span className="text-xl font-bold -ml-[4rem]">
-          Smart<span className="text-orange">Rep</span> AI
-        </span>
+        <h1 className="text-xl font-bold -ml-[2rem]">
+         Data<span className="text-red-600">Query</span>AI
+        </h1>
         </Link>
         <Menu
           className="cursor-pointer animate-fade-in opacity-0 delay-300 fill-mode-forwards"
@@ -47,7 +47,7 @@ const MaxMenu = ({ current, domains, onExpand, onSignOut }: Props) => {
       </div>
       <div className="animate-fade-in opacity-0 delay-300 fill-mode-forwards flex flex-col justify-between h-full">
         <div className="flex flex-col justify-start">
-          <p className="text-xs text-gray-500 mb-3">MENU</p>
+          <p className="text-sm text-black  ml-2 font-bold mt-3 ">MENU</p>
           {SIDE_BAR_MENU.map((menu, key) => (
             <MenuItem
               size="max"

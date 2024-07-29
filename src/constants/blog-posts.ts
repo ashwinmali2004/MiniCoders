@@ -2,43 +2,50 @@ export const blogPosts = [
     {
       id: "blog1",
       title: "Customer Service with Conversational AI",
-      image: "/blogimages/customer-service.png",
+      image: "/blogimages/blog-1.avif",
       content: `
-        <p>SmartRep AI revolutionizes customer service by leveraging advanced conversational AI technology. This enables businesses to provide timely, accurate, and personalized support to their customers, enhancing overall user experience and satisfaction. Here are some key benefits:</p>
+        <p>DataQuery
+        DataQuery AI revolutionizes customer service by leveraging advanced conversational AI technology. This enables businesses to provide timely, accurate, and personalized support to their customers, enhancing overall user experience and satisfaction. Here are some key benefits:</p>
 
         <h3>24/7 Availability</h3>
         <p>Conversational AI ensures that your customers have access to support at any time, day or night. This constant availability helps in addressing customer queries and issues promptly, reducing wait times and improving customer satisfaction.</p>
 
         <h3>Personalized Interactions</h3>
-        <p>SmartRep AI uses intelligent algorithms to understand and respond to customer queries in a personalized manner. By analyzing past interactions and customer data, it can provide tailored responses that meet individual needs and preferences.</p>
+        <p>DataQuery
+        DataQuery AI uses intelligent algorithms to understand and respond to customer queries in a personalized manner. By analyzing past interactions and customer data, it can provide tailored responses that meet individual needs and preferences.</p>
 
         <h3>Efficiency and Scalability</h3>
-        <p>Automating customer service through AI reduces the workload on human agents, allowing them to focus on more complex tasks. SmartRep AI can handle multiple interactions simultaneously, making it scalable and efficient, particularly during peak times.</p>
+        <p>Automating customer service through AI reduces the workload on human agents, allowing them to focus on more complex tasks. DataQuery
+        DataQuery AI can handle multiple interactions simultaneously, making it scalable and efficient, particularly during peak times.</p>
 
         <h3>Seamless Integration</h3>
-        <p>SmartRep AI integrates effortlessly with your existing systems, including CRM, email marketing, and payment gateways like Stripe. This integration ensures a seamless flow of information, enabling more effective and efficient customer service operations.</p>
+        <p>DataQuery
+        DataQuery AI integrates effortlessly with your existing systems, including CRM, email marketing, and payment gateways like Stripe. This integration ensures a seamless flow of information, enabling more effective and efficient customer service operations.</p>
 
         <h3>Data-Driven Insights</h3>
         <p>Conversational AI collects and analyzes data from customer interactions, providing valuable insights into customer behavior, preferences, and pain points. These insights can be used to improve products, services, and customer engagement strategies.</p>
 
         <h3>Real-Time Support</h3>
-        <p>Whether it’s answering frequently asked questions, booking appointments, or processing payments, SmartRep AI provides real-time support to customers. This immediate assistance helps in resolving issues quickly, leading to a more positive customer experience.</p>
+        <p>Whether it’s answering frequently asked questions, booking appointments, or processing payments, DataQuery
+        DataQuery AI provides real-time support to customers. This immediate assistance helps in resolving issues quickly, leading to a more positive customer experience.</p>
 
         <h3>Multichannel Support</h3>
-        <p>SmartRep AI can be deployed across various channels, including websites, social media, and messaging apps. This multichannel presence ensures that customers can reach out for support through their preferred communication method.</p>
+        <p>DataQuery
+        DataQuery AI can be deployed across various channels, including websites, social media, and messaging apps. This multichannel presence ensures that customers can reach out for support through their preferred communication method.</p>
 
         <h3>Cost-Effective Solution</h3>
         <p>Implementing conversational AI reduces the need for a large customer service team, leading to significant cost savings. It also minimizes the costs associated with training and managing human agents.</p>
 
-        <p>By integrating SmartRep AI into your customer service strategy, you can deliver exceptional support, enhance customer loyalty, and drive business growth. Embrace the future of customer service with conversational AI and transform the way you interact with your customers.</p>
+        <p>By integrating DataQuery
+        DataQuery AI into your customer service strategy, you can deliver exceptional support, enhance customer loyalty, and drive business growth. Embrace the future of customer service with conversational AI and transform the way you interact with your customers.</p>
       `,
-      createdAt: "2024-02-02T10:00:00Z"
+      createdAt: "2024-08-24T10:00:00Z"
     },
 
     {
         id: "blog2",
         title: "Revolutionizing Customer Service with Conversational AI",
-        image: "/blogimages/aicustomer.png",
+        image: "/blogimages/blog-2.avif",
         content: `
           <p>In an era where customer experience is a key differentiator for businesses, adopting innovative technologies is essential to stay ahead of the competition. AI-Powered Perception, or AI-Perceives, has emerged as a powerful tool to revolutionize customer service, offering timely, accurate, and personalized support. This blog post explores how integrating AI-Perceives can transform your customer service strategy and enhance customer satisfaction.</p>
 
@@ -71,12 +78,12 @@ export const blogPosts = [
 
           <p>Start leveraging AI-Perceives today and experience the benefits of enhanced customer engagement, streamlined operations, and cost savings. The future of customer service is here, and it’s powered by AI-Perceives.</p>
         `,
-        createdAt: "2024-03-02T10:00:00Z"
+        createdAt: "2024-08-26T10:00:00Z"
       },
       {
         id: "blog3",
         title: "Transforming Customer Service with AI Robots",
-        image: "/blogimages/ai-robots.png",
+        image: "/blogimages/blog-3.jpg",
         content: `
         <p>In the dynamic landscape of customer service, businesses are constantly seeking innovative solutions to enhance customer experiences and streamline operations. One of the most groundbreaking advancements in this field is the deployment of AI robots. These intelligent robots are revolutionizing customer service by providing efficient, personalized, and round-the-clock support. In this blog post, we’ll explore how AI robots are transforming customer service and the myriad benefits they bring to businesses and customers alike.</p>
 
@@ -109,7 +116,7 @@ export const blogPosts = [
 
         <p>Start leveraging AI robots today to experience the benefits of enhanced customer engagement, streamlined operations, and improved efficiency. The future of customer service is here, and it’s powered by AI.</p>
       `,
-        createdAt: "2024-04-02T10:00:00Z"
+        createdAt: "2024-08-28T10:00:00Z"
       },
       {
         id: "blog4",
@@ -147,12 +154,12 @@ export const blogPosts = [
 
           <p>Start leveraging Apple Vision Pro today to experience the benefits of immersive customer engagement, streamlined operations, and improved satisfaction. The future of customer service is here, and it’s powered by Apple Vision Pro.</p>
         `,
-        createdAt: "2024-05-02T10:00:00Z"
+        createdAt: "2024-08-30T10:00:00Z"
       },
       {
         id: "blog5",
         title: "Enhancing Customer Service with AI-Powered Perception",
-        image: "/blogimages/ai-perceives.png",
+        image: "/blogimages/blog-4.jpg",
         content: `
           <p>In the rapidly evolving landscape of customer service, businesses are increasingly turning to artificial intelligence (AI) to meet and exceed customer expectations. One of the most transformative technologies in this space is AI-powered perception, or AI-Perceives. By leveraging advanced AI capabilities to understand and interpret customer interactions, businesses can deliver more accurate, personalized, and efficient service. This blog post explores how AI-Perceives can revolutionize customer service and enhance customer satisfaction.</p>
 
@@ -188,12 +195,12 @@ export const blogPosts = [
 
           <p>Start leveraging AI-Perceives today to experience the benefits of enhanced customer engagement, streamlined operations, and cost savings. The future of customer service is here, and it’s powered by AI.</p>
         `,
-        createdAt: "2024-06-01T10:00:00Z"
+        createdAt: "2024-08-31T10:00:00Z"
       },
       {
         id: "blog6",
         title: "Enhancing Customer Service with Conversational AI",
-        image: "/blogimages/future-of-ai.png",
+        image: "/blogimages/blog-6.avif",
         content: `
           <p>In today's fast-paced digital world, businesses are constantly seeking innovative solutions to enhance customer service. One such solution that has gained significant traction is conversational AI. Leveraging advanced technologies, conversational AI has the potential to revolutionize customer interactions, providing timely, accurate, and personalized support. In this blog post, we'll explore the benefits of integrating conversational AI into your customer service strategy and how it can transform the way you engage with your customers.</p>
 
@@ -226,7 +233,7 @@ export const blogPosts = [
 
           <p>Embrace the future of customer service with conversational AI and transform the way you interact with your customers. Start your journey today and experience the myriad benefits that this innovative technology has to offer.</p>
         `,
-        createdAt: "2024-07-01T10:00:00Z"
+        createdAt: "2024-09-05T10:00:00Z"
       }
 
 

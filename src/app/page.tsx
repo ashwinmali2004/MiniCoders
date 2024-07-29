@@ -21,6 +21,7 @@ import parse from 'html-react-parser'
 import { getMonthName } from '@/lib/utils'
 import Stripe from 'stripe'
 import Contact from '@/components/contact'
+import Team from '@/components/team'
 
 const stripe = new Stripe(process.env.STRIPE_SECRET!, {
   typescript: true,
@@ -45,128 +46,200 @@ export default async function Home() {
     <main>
 
       <NavBar />
-      <section>
+      <section id="home">
         <div className="flex items-center justify-center flex-col mt-[80px] gap-4 ">
-          <span className="text-orange bg-orange/20 px-4 py-2 rounded-full text-sm">
-            An AI powered sales assistant chatbot
+          <span className="text-white font-bold bg-purple-800 px-4 py-2  shadow-lg rounded-full text-lg ml-2 mr-2">
+            An AI powered Data Query chatbot & Business AI
           </span>
-          <div className="animate-text bg-gradient-to-r from-orange via-yellow-200 to-yellow-300 bg-clip-text text-transparent font-black">
+          <div className="animate-text bg-gradient-to-r from-cyan-500 to-purple-600 bg-clip-text text-transparent font-black">
           <h1 className=" text-6xl sm:text-7xl md:text-9xl lg:text-[150px] xl:text-[200px] font-bold text-center mt-10">
-            SmartRep AI
+          DataQueryAI
           </h1>
         </div>
           <p className="text-center max-w-[300px] md:max-w-[500px] mb-10">
-            Your AI powered sales assistant! Embed SmartRep AI into any website
-            with just a snippet of code!
+            Your AI powered Database assistant! Embed <span className='text-red-800 font-bold'>DataQueryAI</span> AI into any Database
+            with just a step
           </p>
-          <Link href="/dashboard">
-          <Button className="bg-orange hover:bg-yellow-300 font-bold text-white px-4">
-            Start For Free
+         
+          <Image
+            src="/images/dataquery-demo.png"
+            width={1000}
+            height={400}
+            alt="Logo"
+            className="max-w-xs md:max-w-2xl object-contain "
+          />
+      
+        </div>
+        <div className='flex items-center justify-center flex-col gap-4 mt-4'>
+        <div className='md:flex md:items-center md:justify-center md:flex-row'> 
+          <div className='flex items-center justify-center flex-col text-center p-6'>
+            <Image src="/images/plug.png" width={40} height={40} alt='logo' />
+             <h1 className='font-bold text-xl pt-4'>Easy Connection</h1>
+             <p className='text-sm'> connect to various databases with minimal setup </p>
+          </div>
+          <div className='flex items-center justify-center flex-col text-center p-6'>
+            <Image src="/images/search.png" width={40} height={40} alt='logo' />
+             <h1 className='font-bold text-xl pt-4'>Intelligent Querying</h1>
+             <p className='text-sm'> Leverage Ai to craft complex queries effortlessly </p>
+          </div>
+          <div className='flex items-center justify-center flex-col text-center p-6'>
+            <Image src="/images/dashboard.png" width={40} height={40} alt='logo' />
+             <h1 className='font-bold text-xl pt-4'>Visualize Data</h1>
+             <p className='text-sm'> Generate insightful Chart and report</p>
+          </div>
+        </div>
+
+        <Link href="/dashboard">
+          <Button className="bg-red-600 hover:bg-red-400 font-bold text-white px-4 hover:shadow-xl hover:shadow-red-600">
+           Start The Work
           </Button>
           </Link>
-          <Image
-            src="/images/iphonecorinna.png"
-            width={400}
-            height={100}
-            alt="Logo"
-            className="max-w-xs md:max-w-lg object-contain"
-          />
         </div>
       </section>
-
+{/* this is project Featuers page */}
       <section className="features-section py-20 mt-10" id='features'>
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-10">Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="feature-card bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-2">🤖 Automated AI Sales Rep</h3>
-              <p className="text-gray-600">Engages with customers and answers their queries intelligently.</p>
+            
+            <div className="feature-card bg-white p-6 rounded-xl shadow-md md:flex md:items-center md:justify-center md:flex-col text-center hover:border-cyan-500 hover:border-2 hover:shadow-cyan-500/50 hover:shadow-xl">
+                  <Image src="/features/AI-Powered.jpg" height={150} width={300} alt='icons' />
+              <h3 className="text-2xl font-semibold mb-2"> AI-Powered Data Queries</h3>
+              <p className="text-gray-600">Leverage advanced AI algorithms to simplify complex data queries and gain deeper insights.
+              </p>
             </div>
-            <div className="feature-card bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-2">📅 Appointment Booking</h3>
-              <p className="text-gray-600">Effortlessly schedules appointments with an integrated calendar widget.</p>
+           
+          
+            <div className="feature-card bg-white p-6 rounded-xl shadow-md md:flex md:items-center md:justify-center md:flex-col text-center hover:border-cyan-500 hover:border-2 hover:shadow-cyan-500/50 hover:shadow-xl min-h-[400]">
+                               <Image src="/features/Interactive.jpg" height={100} width={250} alt='icons' />
+              <h3 className="text-2xl font-semibold mb-2">Interactive Data Visualization</h3>
+              <p className="text-gray-600">Transform your data into stunning visualizations for easier analysis and interpretation.</p>
             </div>
-            <div className="feature-card bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-2">💻 Universal Compatibility</h3>
-              <p className="text-gray-600">Easy integration with any website through a simple code snippet.</p>
+            
+           
+            <div className="feature-card bg-white p-6 rounded-xl shadow-md md:flex md:items-center md:justify-center md:flex-col text-center hover:border-cyan-500 hover:border-2 hover:shadow-cyan-500/50 hover:shadow-xl">
+                               <Image src="/features/Seamless-Database-Connectivity.jpg" height={150} width={300} alt='icons' />
+              <h3 className="text-2xl font-semibold mb-2">Seamless Database Connectivity</h3>
+              <p className="text-gray-600">Connect to your databases effortlessly with secure and straightforward authentication.</p>
             </div>
-            <div className="feature-card bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-2">🧠 Smart Question Linking</h3>
-              <p className="text-gray-600">Provides accurate and relevant responses based on user queries.</p>
+         
+            <div className="feature-card bg-white p-6 rounded-xl shadow-md md:flex md:items-center md:justify-center md:flex-col text-center hover:border-cyan-500 hover:border-2 hover:shadow-cyan-500/50 hover:shadow-xl">
+                               <Image src="/features/Secure-Data-Handling.png" height={150} width={300} alt='icons' />
+              <h3 className="text-2xl font-semibold mb-2">Secure Data Handling</h3>
+              <p className="text-gray-600">Ensure your data is protected with robust security measures and encryption.</p>
             </div>
-            <div className="feature-card bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-2">💬 Real-Time Chat</h3>
-              <p className="text-gray-600">Supports both manual and automated chat options.</p>
+         
+            <div className="feature-card bg-white p-6 rounded-xl shadow-md md:flex md:items-center md:justify-center md:flex-col text-center hover:border-cyan-500 hover:border-2 hover:shadow-cyan-500/50 hover:shadow-xl">
+                               <Image src="/features/Real-Time-Collaboration.jpg" height={150} width={300} alt='icons' />
+              <h3 className="text-2xl font-semibold mb-2">Real-Time Collaboration</h3>
+              <p className="text-gray-600">Collaborate with your team in real-time, sharing insights and working on data together.</p>
             </div>
-            <div className="feature-card bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-2">🏷️ White-Labeling Options</h3>
-              <p className="text-gray-600">Customize the chatbot to match your brand&apos;s identity.</p>
+        
+            <div className="feature-card bg-white p-6 rounded-xl shadow-md md:flex md:items-center md:justify-center md:flex-col text-center hover:border-cyan-500 hover:border-2 hover:shadow-cyan-500/50 hover:shadow-xl">
+                               <Image src="/features/Customizable-Dashboards.png" height={150} width={300} alt='icons' />
+              <h3 className="text-2xl font-semibold mb-2">Customizable Dashboards </h3>
+              <p className="text-gray-600">Create personalized dashboards to monitor key metrics and track performance at a glance.</p>
             </div>
-            <div className="feature-card bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-2">🎨 Customizable Interface</h3>
-              <p className="text-gray-600">Modify the look and feel of the chatbot to suit your website&apos;s design.</p>
+           
+            <div className="feature-card bg-white p-6 rounded-xl shadow-md md:flex md:items-center md:justify-center md:flex-col text-center hover:border-cyan-500 hover:border-2 hover:shadow-cyan-500/50 hover:shadow-xl">
+                               <Image src="/features/Advanced-Search-Capabilities.avif" height={150} width={300} alt='icons' />
+              <h3 className="text-2xl font-semibold mb-2">Advanced Search Capabilities</h3>
+              <p className="text-gray-600">Utilize powerful search tools to find relevant data and insights quickly and efficiently.</p>
             </div>
-            <div className="feature-card bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-2">🗓️ Calendar Widget</h3>
-              <p className="text-gray-600">Integrated calendar for seamless appointment bookings.</p>
+            
+            <div className="feature-card bg-white p-6 rounded-xl shadow-md md:flex md:items-center md:justify-center md:flex-col text-center hover:border-cyan-500 hover:border-2 hover:shadow-cyan-500/50 hover:shadow-xl">
+                               <Image src="/features/Automated-Reporting.jpg" height={150} width={300} alt='icons' />
+              <h3 className="text-2xl font-semibold mb-2">Automated Reporting</h3>
+              <p className="text-gray-600">Generate comprehensive reports automatically, saving time and ensuring accuracy.</p>
             </div>
-            <div className="feature-card bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-2">💳 Stripe Integration</h3>
-              <p className="text-gray-600">Securely process payments through Stripe.</p>
+           
+            <div className="feature-card bg-white p-6 rounded-xl shadow-md md:flex md:items-center md:justify-center md:flex-col text-center hover:border-cyan-500 hover:border-2 hover:shadow-cyan-500/50 hover:shadow-xl">
+                               <Image src="/features/User-Friendly-Interface.avif" height={150} width={300} alt='icons' />
+              <h3 className="text-2xl font-semibold mb-2">User-Friendly Interface</h3>
+              <p className="text-gray-600">Enjoy an intuitive and responsive interface designed for both novice and expert users.</p>
             </div>
-            <div className="feature-card bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-2">✉️ Email Marketing</h3>
-              <p className="text-gray-600">Simple tools to create and send marketing emails.</p>
+        
+            <div className="feature-card bg-white p-6 rounded-xl shadow-md md:flex md:items-center md:justify-center md:flex-col text-center hover:border-cyan-500 hover:border-2 hover:shadow-cyan-500/50 hover:shadow-xl">
+                               <Image src="/features/Integration-Tools1.jpg" height={150} width={300} alt='icons' />
+              <h3 className="text-2xl font-semibold mb-2">Integration with Popular Tools</h3>
+              <p className="text-gray-600">Integrate seamlessly with other popular tools and platforms to enhance your workflow.</p>
             </div>
-            <div className="feature-card bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-2">💰 Financial Dashboard</h3>
-              <p className="text-gray-600">Monitor and manage your financial transactions.</p>
+            
+            <div className="feature-card bg-white p-6 rounded-xl shadow-md md:flex md:items-center md:justify-center md:flex-col text-center hover:border-cyan-500 hover:border-2 hover:shadow-cyan-500/50 hover:shadow-xl">
+                               <Image src="/features/Comprehensive-Documentation.jpg" height={150} width={300} alt='icons' />
+              <h3 className="text-2xl font-semibold mb-2">Comprehensive Documentation</h3>
+              <p className="text-gray-600">Access detailed guides and documentation to help you get the most out of DataQueryAI.</p>
             </div>
-            <div className="feature-card bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-2">💾 Lead Management</h3>
-              <p className="text-gray-600">Save visitor information as leads for future follow-ups.</p>
+          
+            <div className="feature-card bg-white p-6 rounded-xl shadow-md md:flex md:items-center md:justify-center md:flex-col text-center hover:border-cyan-500 hover:border-2 hover:shadow-cyan-500/50 hover:shadow-xl">
+                               <Image src="/features/Responsive.jpg" height={150} width={300} alt='icons' />
+              <h3 className="text-2xl font-semibold mb-2">Responsive Support</h3>
+              <p className="text-gray-600">Get timely assistance from our dedicated support team, available to help you with any issues.</p>
             </div>
-            <div className="feature-card bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-2">🔐 Custom Login/Signup with OTP</h3>
-              <p className="text-gray-600">Secure authentication with one-time passwords.</p>
+          
+            <div className="feature-card bg-white p-6 rounded-xl shadow-md md:flex md:items-center md:justify-center md:flex-col text-center hover:border-cyan-500 hover:border-2 hover:shadow-cyan-500/50 hover:shadow-xl">
+                               <Image src="/features/Scalable-Infrastructure1.jpg" height={150} width={300} alt='icons' />
+              <h3 className="text-2xl font-semibold mb-2">Scalable Infrastructure</h3>
+              <p className="text-gray-600">Scale effortlessly with our cloud-based infrastructure, handling large datasets with ease.</p>
             </div>
-            <div className="feature-card bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-2">📲 Secure File/Image Uploads</h3>
-              <p className="text-gray-600">Allow users to upload files and images safely.</p>
+           
+            <div className="feature-card bg-white p-6 rounded-xl shadow-md md:flex md:items-center md:justify-center md:flex-col text-center hover:border-cyan-500 hover:border-2 hover:shadow-cyan-500/50 hover:shadow-xl">
+                               <Image src="/features/Notifications.jpg" height={150} width={300} alt='icons' />
+              <h3 className="text-2xl font-semibold mb-2">Email Marketing</h3>
+              <p className="text-gray-600">This subheading emphasizes the transformative impact of integrating AI into email marketing strategies.</p>
             </div>
-            <div className="feature-card bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-2">🔍 SEO Optimized Blogging</h3>
+            
+            <div className="feature-card bg-white p-6 rounded-xl shadow-md md:flex md:items-center md:justify-center md:flex-col text-center hover:border-cyan-500 hover:border-2 hover:shadow-cyan-500/50 hover:shadow-xl">
+                               <Image src="/features/Blogging.jpg" height={150} width={300} alt='icons' />
+              <h3 className="text-2xl font-semibold mb-2">SEO Optimized Blogging</h3>
               <p className="text-gray-600">Improve your site&apos;s search engine ranking with SEO-friendly blog posts.</p>
             </div>
-            <div className="feature-card bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-2">🏗️ Improved Architecture</h3>
+            
+            <div className="feature-card bg-white p-6 rounded-xl shadow-md md:flex md:items-center md:justify-center md:flex-col text-center hover:border-cyan-500 hover:border-2 hover:shadow-cyan-500/50 hover:shadow-xl">
+                               <Image src="/features/Improved-Architecture.jpg" height={150} width={300} alt='icons' />
+              <h3 className="text-2xl font-semibold mb-2">Improved Architecture</h3>
               <p className="text-gray-600">Efficient and scalable backend structure.</p>
             </div>
-            <div className="feature-card bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-2">🖥️ Minimal, Stunning UI</h3>
-              <p className="text-gray-600">Clean and modern user interface.</p>
+          
+            <div className="feature-card bg-white p-6 rounded-xl shadow-md md:flex md:items-center md:justify-center md:flex-col text-center hover:border-cyan-500 hover:border-2 hover:shadow-cyan-500/50 hover:shadow-xl">
+                               <Image src="/features/Pricing-Plans.jpg" height={150} width={300} alt='icons' />
+              <h3 className="text-2xl font-semibold mb-2">Flexible Pricing Plans</h3>
+              <p className="text-gray-600">Choose from a range of pricing plans tailored to fit different needs and budgets.</p>
             </div>
-            <div className="feature-card bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-2">❓ FAQ Section</h3>
+            
+            <div className="feature-card bg-white p-6 rounded-xl shadow-md md:flex md:items-center md:justify-center md:flex-col text-center hover:border-cyan-500 hover:border-2 hover:shadow-cyan-500/50 hover:shadow-xl">
+                               <Image src="/features/FAQ-Section1.jpg" height={150} width={300} alt='icons' />
+              <h3 className="text-2xl font-semibold mb-2">FAQ Section</h3>
               <p className="text-gray-600">Provide quick answers to frequently asked questions.</p>
             </div>
-            <div className="feature-card bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-2">🌓 Light/Dark Mode Toggle</h3>
-              <p className="text-gray-600">Switch between light and dark modes for user comfort.</p>
-            </div>
-            <div className="feature-card bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-2">⚙️ Feature Control Settings</h3>
-              <p className="text-gray-600">Enable or disable features as per your plan.</p>
-            </div>
-            <div className="feature-card bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-2">🔒 Restrict Features by Plan</h3>
-              <p className="text-gray-600">Control feature access based on user subscription plans.</p>
-            </div>
+           
+
           </div>
         </div>
       </section>
+      {/* this is project document page */}
+      <section className='text-center' id="doc">
+        <div className='md:h-[80vh] shadow-xl rounded-2xl md:flex md:flex-row md:mr-20 md:ml-20'>
+        <div className='md:w-[60vw] flex flex-row justify-center md:mt-40'>
+          <div className='text-center md:w-[800px] p-6'>
+          <h1 className='font-bold text-5xl'>Welcome to DataQueryAI Documentation</h1>
+          <p className=' text-lg pt-6 font-serif'>Your go-to resource for everything you need to know about using DataQueryAI. From getting started guides to in-depth tutorials, our comprehensive documentation will help you maximize the potential of our AI-powered data query and analysis platform.</p>
+        <Button className='bg-red-600 text-white rounded-lg mt-12 mb-6'>Go Document Page</Button>
+        </div>
+        </div>
+        <div className='flex flex-row justify-center'>
+          <div>
+          <Image src="/images/document-go.png" height={800} width={350} alt="image" /> 
+       
+          </div> </div>
+        </div>
+        
+
+      </section>
+
+{/* project princing page */}
       <section className="flex justify-center items-center flex-col gap-4 mt-20" id='pricing'>
-        <h2 className="text-4xl text-center max-w-[300px] md:max-w-[500px] animate-text bg-gradient-to-r from-orange via-yellow-200 to-yellow-300 bg-clip-text text-transparent font-black"> Choose what fits you right</h2>
+        <h2 className="text-4xl text-center max-w-[300px] md:max-w-[500px] animate-text bg-gradient-to-r from-purple-600 via- to-cyan-500 bg-clip-text text-transparent font-black p-2"> Choose what fits you right</h2>
         <p className="text-muted-foreground text-center max-w-lg">
           Our straightforward pricing plans are tailored to meet your needs. If
           {" you're"} not ready to commit you can get started for free.
@@ -176,14 +249,20 @@ export default async function Home() {
         {pricingCards.map((card) => (
           <Card
             key={card.title}
-            className={clsx('w-[300px] flex flex-col justify-between', {
-              'border-2 border-orange': card.title === 'Ultimate',
-              'border-2 border-yellow-300': card.title === 'Pro',
+            className={clsx('w-[300px] flex flex-col justify-between  hover:shadow-2xl cursor-pointer', {
+              'border-2 border-cyan-500   hover:shadow-cyan-400': card.title === 'Standard',
+              'border-2 border-red-500  hover:shadow-red-500': card.title === 'Ultimate',
+              'border-2 border-purple-500  hover:shadow-purple-500': card.title === 'Pro',
 
             })}
           >
             <CardHeader>
-              <CardTitle className="text-orange">{card.title}</CardTitle>
+              <CardTitle className={clsx("font-bold",{
+              'text-cyan-600': card.title === 'Standard',
+              'text-red-600': card.title === 'Ultimate',
+              'text-purple-700': card.title === 'Pro',
+
+            })}>{card.title}</CardTitle>
               <CardDescription>
                 {pricingCards.find((c) => c.title === card.title)?.description}
               </CardDescription>
@@ -206,21 +285,18 @@ export default async function Home() {
                   </div>
                 ))}
               </div>
-              {prices.data.map((price) => (
-                price.id === card.priceId && (
-                  <Link
-                    key={price.id}
-                    href={`/dashboard?plan=${price.id}`}
-                    className="bg-[#f3d299] border-orange border-2 p-2 w-full text-center font-bold rounded-md hover:bg-yellow-200 hover:scale-105"
-                  >
-                    Get Started
-                  </Link>
-                )
-              ))}
+              <div>
+              <Link href="#"><Button className={clsx("w-[250px] border-2 hover:shadow-2xl",{
+              'bg-cyan-600 hover:shadow-cyan-500': card.title === 'Standard',
+              'bg-red-600 hover:shadow-red-500': card.title === 'Ultimate',
+              'bg-purple-700 hover:shadow-purple-500': card.title === 'Pro',})}>Get Start</Button></Link>
+             </div>
+             
             </CardFooter>
           </Card>
         ))}
       </div>
+      {/* News Blogogs Pages  */}
       <section className="flex justify-center items-center flex-col gap-4 mt-28" id='news'>
         <h2 className="text-4xl font-bold">News Room</h2>
         <p className="text-muted-foreground text-center max-w-lg">
@@ -253,34 +329,14 @@ export default async function Home() {
             </Link>
           ))}
       </section>
-      {/* <section className="md:grid-cols-3 grid-cols-1 grid gap-5 container mt-8">
-        {posts &&
-          posts.map((post) => (
-            <Link
-              href={`/blogs/${post.id}`}
-              key={post.id}
-            >
-              <Card className="flex flex-col gap-2 rounded-xl overflow-hidden h-full hover:bg-gray-100">
-                <div className="relative w-full aspect-video">
-                  <Image
-                    src={`${process.env.CLOUDWAYS_UPLOADS_URL}${post.image}`}
-                    alt="post featured image"
-                    fill
-                  />
-                </div>
-                <div className="py-5 px-10 flex flex-col gap-5">
-                  <CardDescription>
-                    {getMonthName(post.createdAt.getMonth())}{' '}
-                    {post.createdAt.getDate()} {post.createdAt.getFullYear()}
-                  </CardDescription>
-                  <CardTitle>{post.title}</CardTitle>
-                  {parse(post.content.slice(4, 100))}...
-                </div>
-              </Card>
-            </Link>
-          ))}
-      </section> */}
+
+    {/* project team section */}
+      <Team  />
+
+        {/* project Contact section */}
       <Contact />
+
+        {/* project Footer section */}
       <Footer />
     </main>
   )

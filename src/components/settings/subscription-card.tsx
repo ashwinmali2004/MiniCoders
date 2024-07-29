@@ -26,13 +26,13 @@ const SubscriptionCard = ({
       <Card
         className={cn(
           'w-full cursor-pointer',
-          payment == id && 'border-orange'
+          payment == id && 'border-red-600 shadow-md shadow-red-600'
         )}
       >
         <CardContent className="flex justify-between p-2">
           <div className="flex items-center gap-3">
             <Card className={cn('flex justify-center p-3 border-none')}>
-              <CardTitle>${price}</CardTitle>
+              <CardTitle>₹{price}</CardTitle>
             </Card>
             <div className="">
               <CardDescription className="font-bold">{title}</CardDescription>
@@ -45,7 +45,7 @@ const SubscriptionCard = ({
             <div
               className={cn(
                 'w-4 h-4 rounded-full',
-                payment == id ? 'bg-peach' : 'bg-platinum'
+                payment == id ? 'bg-red-200' : 'bg-platinum'
               )}
             />
             <Input

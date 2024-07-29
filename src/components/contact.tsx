@@ -24,19 +24,19 @@ const Contact: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto p-4 mt-20" id='contact'>
       <h1 className="text-4xl font-bold text-center mb-12">Contact Us</h1>
-      <div className="border rounded-lg dark:shadow-yellow-500 p-6 shadow-lg">
+      <div className="border rounded-lg shadow-green-300 p-6 shadow-2xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
           <div>
             <h2 className="font-semibold">Address:</h2>
-            <p>1234 Street, NYC, USA</p>
+            <p>IT Hub, Jaipur</p>
           </div>
           <div>
             <h2 className="font-semibold">Phone:</h2>
-            <p>(123) 456-7890</p>
+            <p>(+91) 9460994274 </p>
           </div>
           <div>
             <h2 className="font-semibold">Email:</h2>
-            <p>info@smartrepai.com</p>
+            <p>info@dataqueryai.com</p>
           </div>
         </div>
         <form ref={form} onSubmit={sendEmail} className="space-y-4">
@@ -61,7 +61,7 @@ const Contact: React.FC = () => {
             rows={4}
             required
           />
-          <button type="submit" className="bg-orange hover:bg-yellow-300 text-white font-bold py-2 px-4 rounded">
+          <button type="submit" className="bg-gradient-to-r from-cyan-400 to-green-400 hover:bg-yellow-300 text-white font-bold py-2 px-4 rounded">
             Send Message
           </button>
         </form>

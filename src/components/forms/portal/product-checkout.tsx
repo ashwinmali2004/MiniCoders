@@ -45,7 +45,7 @@ const PaymentCheckout = ({
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="col-span-1 border-r-2 pr-5 flex flex-col">
-            <h2 className="text-3xl font-bold mb-5">${amount}</h2>
+            <h2 className="text-3xl font-bold mb-5">₹{amount}</h2>
             {products &&
               products.map((product, key) => (
                 <Card
@@ -61,7 +61,7 @@ const PaymentCheckout = ({
                   </div>
                   <div className="flex-1 flex justify-between">
                     <p className="text-xl font-semibold">{product.name}</p>
-                    <p className="text-2xl font-bold">${product.price}</p>
+                    <p className="text-2xl font-bold">₹{product.price}</p>
                   </div>
                 </Card>
               ))}

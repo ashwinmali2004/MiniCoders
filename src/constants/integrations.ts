@@ -12,7 +12,7 @@ export const INTEGRATION_LIST_ITEMS: IntegrationsListItemProps[] = [
     id: '1',
     name: 'stripe',
     description:
-      'Stripe is the fastest and easiest way to integrate payments and financial services into your software platform or marketplace.',
+      'Stripe is the fastest and easiest way to integrate payments into DataQueryAi platform.',
     logo: '8bee6eca-581d-4e66-af83-b32f5a906bf8',
     title: 'Connect Stripe Account',
     modalDescription:

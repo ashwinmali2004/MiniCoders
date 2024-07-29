@@ -9,7 +9,7 @@ import { ThemeProvider } from '@/context/them-provider'
 const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'SmartRep AI',
+  title: 'DataQueryAI',
   description: 'Next Level AI chatbot to service your website',
 }
 

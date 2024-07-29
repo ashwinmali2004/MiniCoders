@@ -7,13 +7,15 @@ type MenuLogoProps = {
 
 export const MenuLogo = ({ onClick }: MenuLogoProps) => {
   return (
-    <div onClick={onClick} className="cursor-pointer -mt-2 -m-5">
+    <div  className="cursor-pointer mt-2 ml-2">
       <Image
         src="/logo.png"
         alt="Logo"
         width={60}
         height={60}
         priority
+        onClick={onClick}
+        className="cursor-pointer "
       />
     </div>
   )

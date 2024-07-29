@@ -31,7 +31,7 @@ const Page = async (props: Props) => {
   return (
     <>
       <InfoBar />
-      <div className="grid grid-cols-1 lg:grid-cols-3 flex-1 h-0 gap-5">
+      <div className="grid grid-cols-1 lg:grid-cols-3 flex-1 h-0 gap-5 pt-[140px] md:pt-[105px]">
         <div className="lg:col-span-2 overflow-y-auto">
           <AllAppointments bookings={domainBookings?.bookings} />
         </div>
@@ -47,7 +47,7 @@ const Page = async (props: Props) => {
                 className="rounded-xl overflow-hidden mt-4"
               >
                 <CardContent className="p-0 flex">
-                  <div className="w-4/12 text-xl bg-peach py-10 flex justify-center items-center font-bold">
+                  <div className="w-4/12 text-xl bg-gradient-to-r from-purple-300 via- to-cyan-300  py-10 flex justify-center items-center font-bold">
                     {booking.slot}
                   </div>
                   <div className="flex flex-col flex-1">

@@ -5,19 +5,27 @@ type Props = {
   value: number
   icon: JSX.Element
   sales?: boolean
+  testing?: boolean
+  backgroundColor?: string
 }
 
-const DashboardCard = ({ icon, title, value, sales }: Props) => {
+const DashboardCard = ({ icon, title, value, sales, testing, backgroundColor }: Props) => {
   return (
-    <div className=" rounded-lg flex flex-col gap-3 pr-10 pl-10 py-10 md:pl-10 md:pr-20 border-[1px] border-border bg-cream dark:bg-muted md:w-fit w-full">
+    <div 
+      className={`rounded-lg flex flex-col gap-3 pr-5 pl-5 py-5   cursor-pointer hover:shadow-lg hover:shadow-red-300`} 
+      style={{ background: backgroundColor || 'linear-gradient(to right, #ec4899, #c084fc, #f87171)' }} // default gradient
+    >
       <div className="flex gap-3">
         {icon}
-        <h2 className="font-bold text-xl">{title}</h2>
+        <h2 className="font-bold text-lg text-white"> {title}</h2>
       </div>
-      <p className="font-bold text-4xl">
-        {sales && '$'}
-        {value}
-      </p>
+      <div className='text-center'>
+        <p className="font-bold text-sm pl-2 text-white">
+          {sales && '₹'}
+          {value} <br/>
+          <span className='text-[10px]'> {testing && "(Testing Mode)"} </span>
+        </p>
+      </div>
     </div>
   )
 }

@@ -10,6 +10,10 @@ import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Loader } from '@/components/loader'
+import CodeSnippetjs from './code-snippet-js'
+
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+
 
 const WelcomeMessage = dynamic(
   () => import('./greetings-message').then((props) => props.default),
@@ -54,7 +58,8 @@ const SettingsForm = ({ id, name, chatBot, plan }: Props) => {
           register={register}
           errors={errors}
         />
-        <CodeSnippet id={id} />
+   
+
       </div>
       <div className="flex flex-col gap-3 mt-5">
         <div className="flex gap-4 items-center">
@@ -80,16 +85,16 @@ const SettingsForm = ({ id, name, chatBot, plan }: Props) => {
           </div>
           <div className="col-span-1 relative ">
             <Image
-              src="/images/bot-ui.png"
+              src="/images/demo-chat.png"
               className="sticky top-0"
               alt="bot-ui"
-              width={530}
-              height={769}
+              width={650}
+              height={550}
             />
           </div>
         </div>
       </div>
-      <div className="flex gap-5 justify-end">
+      <div className="flex gap-5 justify-end ">
         <Button
           onClick={onDeleteDomain}
           variant="destructive"
@@ -100,11 +105,19 @@ const SettingsForm = ({ id, name, chatBot, plan }: Props) => {
         </Button>
         <Button
           type="submit"
-          className="w-[100px] h-[50px]"
+          className="w-[100px] h-[50px] mr-4"
         >
           <Loader loading={loading}>Save</Loader>
         </Button>
       </div>
+      <Tabs defaultValue="account" className="w-[400px]">
+  <TabsList>
+    <TabsTrigger value="account">Javascript Code</TabsTrigger>
+    <TabsTrigger value="password">React Code</TabsTrigger>
+  </TabsList>
+  <TabsContent value="account"> <CodeSnippetjs id={id} /> </TabsContent>
+  <TabsContent value="password"><CodeSnippet id={id} /></TabsContent>
+</Tabs>
     </form>
   )
 }

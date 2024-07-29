@@ -20,16 +20,22 @@ const BillingSettings = async (props: Props) => {
   console.log(planFeatures)
   return (
     <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
+      
       <div className="lg:col-span-1">
         <Section
           label="Billing settings"
           message="Add payment information, upgrade and modify your plan."
         />
+        <div className='mt-2 '>
+          <Image src="/images/creditcard.png" height={100} width={250} alt="card" />
+        </div>
       </div>
       <div className="lg:col-span-2 flex justify-start lg:justify-center ">
         <Modal
+          
           title="Choose A Plan"
           description="Tell us about yourself! What do you do? Let’s tailor your experience so it best suits you."
+          image="/images/payment-plan1.jpg" 
           trigger={
             plan && plan === 'STANDARD' ? (
               <Card className="border-dashed bg-cream border-gray-400 w-full cursor-pointer h-[270px] flex justify-center items-center">
@@ -53,6 +59,7 @@ const BillingSettings = async (props: Props) => {
           }
         >
           <SubscriptionForm plan={plan!} />
+         
         </Modal>
       </div>
       <div className="lg:col-span-2">

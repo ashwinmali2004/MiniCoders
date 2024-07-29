@@ -45,14 +45,15 @@ const AiChatBot = (props: Props) => {
       )}
       <div
         className={cn(
-          'rounded-md relative cursor-pointer shadow-md w-20 h-20 flex items-center justify-center bg-grandis',
+          '  rounded-full   shadow-md shadow-cyan-500 hover:shadow-2xl   relative cursor-pointer  w-20 h-20 flex items-center justify-center bg-cyan-100',
           loading ? 'invisible' : 'visible'
         )}
         onClick={onOpenChatBot}
       >
         {currentBot?.chatBot?.icon ? (
           <Image
-            src={`https://ucarecdn.com/${currentBot.chatBot.icon}/`}
+          className='rounded-full border border-cyan-400 p-[1px] '
+            src="/images/chatji.png"
             alt="bot"
             fill
           />

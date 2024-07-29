@@ -72,3 +72,32 @@ export const onLoginUser = async () => {
     return { status: 400, message: 'Error logging in user' }
   }
 }
+
+//name
+export const userFullName = async () => {
+  const user = await currentUser();
+  
+  if (!user) {
+    return { status: 401, message: 'User not found' };
+  }
+
+  try {
+    const authenticatedUser = await client.user.findUnique({
+      where: {
+        clerkId: user.id,
+      },
+      select: {
+        fullname: true,
+      },
+    });
+
+    if (!authenticatedUser) {
+      return { status: 404, message: 'Authenticated user not found in database' };
+    }
+
+    return { status: 200, fullname: authenticatedUser.fullname };
+  } catch (error) {
+    console.error('Error fetching username:', error);
+    return { status: 400, message: 'Error fetching username' };
+  }
+};

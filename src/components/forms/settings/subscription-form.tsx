@@ -20,7 +20,7 @@ const SubscriptionForm = ({ plan }: Props) => {
         <div className="flex flex-col gap-3">
           <SubscriptionCard
             title="STANDARD"
-            description="Perfect if you’re just getting started with SmartRep AI"
+            description="Perfect if you’re just getting started with DataQueryAI"
             price="0"
             payment={payment}
             onPayment={onSetPayment}
@@ -29,8 +29,8 @@ const SubscriptionForm = ({ plan }: Props) => {
 
           <SubscriptionCard
             title="PRO"
-            description="Perfect if you’re just getting started with SmartRep AI"
-            price="15"
+            description="Perfect for Business with DataQueryAI"
+            price="4999"
             payment={payment}
             onPayment={onSetPayment}
             id="PRO"
@@ -38,8 +38,8 @@ const SubscriptionForm = ({ plan }: Props) => {
 
           <SubscriptionCard
             title="ULTIMATE"
-            description="Perfect if you’re just getting started with SmartRep AI"
-            price="35"
+            description="Perfect for Big Company with DataQueryAI"
+            price="9999"
             payment={payment}
             onPayment={onSetPayment}
             id="ULTIMATE"
@@ -47,7 +47,7 @@ const SubscriptionForm = ({ plan }: Props) => {
         </div>
         <StripeElements payment={payment} />
         {payment === 'STANDARD' && (
-          <Button onClick={onUpdatetToFreTier}>
+          <Button onClick={onUpdatetToFreTier} className='bg-red-600'>
             <Loader loading={loading}>Confirm</Loader>
           </Button>
         )}

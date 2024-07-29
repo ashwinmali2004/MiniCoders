@@ -16,11 +16,13 @@ const Page = async (props: Props) => {
   return (
     <>
       <InfoBar></InfoBar>
+      <div className='pt-[140px] md:pt-[90px]'>
       <EmailMarketing
         campaign={campaigns?.campaign!}
         subscription={customers?.subscription!}
         domains={customers?.domains!}
       />
+      </div>
     </>
   )
 }

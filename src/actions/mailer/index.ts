@@ -15,7 +15,7 @@ export const onMailer = (email: string) => {
   const mailOptions = {
     to: email,
     subject: 'Realtime Support',
-    text: 'One of your customers on SmartRep, just switched to realtime mode',
+    text: 'One of your customers on DataQueryAI, just switched to realtime mode',
   }
 
   transporter.sendMail(mailOptions, function (error, info) {

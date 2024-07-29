@@ -14,6 +14,7 @@ export const StripeConnect = ({ connected }: StripeConnectProps) => {
     <Button
       disabled={connected}
       onClick={onStripeConnect}
+      className='bg-cyan-500 hover:bg-blue-700'
     >
       <Loader loading={onStripeAccountPending}>
         {connected ? 'Connected' : 'Connect to stripe'}

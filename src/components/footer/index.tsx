@@ -15,9 +15,9 @@ const Footer = () => {
               height={60}
               alt="logo"
             />
-            <h2 className="text-xl font-bold -ml-3">Smart<span className='text-orange'>Rep</span> AI</h2>
+            <h2 className="text-xl font-bold -ml-3">Data<span className='text-red'>Query</span> AI</h2>
           </aside>
-          <p>Contact us: info@smartrepai.com</p>
+          <p className='mt-4'>Contact us: info@dataqueryai.com</p>
         </div>
         <div>
           <div className="flex justify-center sm:justify-start space-x-6 py-2">
@@ -25,24 +25,24 @@ const Footer = () => {
               className="hover:text-blue-700">
                 <FaFacebookF size={22}/>
             </Link>
-            <Link href="https://twitter.com"
+            <Link href="https://x.com/Piyushs5321"
               className="hover:text-blue-300">
                 <FaTwitter size={22}/>
             </Link>
-            <Link href="https://instagram.com"
+            <Link href="https://www.instagram.com/piyushsharma5321/"
               className="hover:text-pink-500">
                 <FaInstagram size={22}/>
             </Link>
-            <Link href="https://www.linkedin.com/in/jeffjiang13"
+            <Link href="https://www.linkedin.com/in/piyushsharmanova/"
               className="hover:text-blue-500">
               <FaLinkedinIn size={22}/>
             </Link>
-            <Link href="https://github.com/jeffjiang13"
+            <Link href="https://github.com/Piyushsharma2004/"
               className="hover:text-gray-500">
               <FaGithub size={22}/>
             </Link>
           </div>
-          <p className="text-center sm:text-left">&copy; {new Date().getFullYear()} SmartRep. All rights reserved.</p>
+          <p className="text-center sm:text-left">&copy; {new Date().getFullYear()} DataQueryAI All rights reserved.</p>
         </div>
       </div>
     </footer>

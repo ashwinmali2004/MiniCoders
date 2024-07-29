@@ -70,7 +70,7 @@ const EmailMarketing = ({ campaign, domains, subscription }: Props) => {
           <Button
             disabled={isSelected.length == 0}
             onClick={onAddCustomersToCampaign}
-            className="w-full sm:w-auto"
+            className="w-full sm:w-auto bg-red-600 hover:shadow-md hover:shadow-red-500"
           >
             <Plus /> Add to campaign
           </Button>
@@ -98,7 +98,7 @@ const EmailMarketing = ({ campaign, domains, subscription }: Props) => {
                 type="text"
               />
               <Button
-                className="w-full hover:bg-orange"
+                className="w-full bg-red-600 hover:bg-red-400 shadow-md"
                 disabled={loading}
                 type="submit"
               >

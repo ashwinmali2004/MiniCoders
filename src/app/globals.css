@@ -160,3 +160,112 @@ body {
 .chat{
   background-color: transparent !important;
 }
+.dashboard-welcome-card{
+  background-image: url('/images/welcomebg.jpeg');
+  width: 97%;
+  background-size: cover;
+  height: fit-content;
+
+}
+/* custom scrollbar  */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #fffefe;
+}
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(#c62bff,#10f7ff);
+  border-radius: 10px;
+}
+.docdivbg{
+  background-image: url('/images/welcome1-bg.jpg');
+  background-size: cover;
+}
+.taskdivbg{
+  background-image: url('/images/cyan-1.jpg');
+  background-size: cover;
+
+}
+
+
+/* Custom styles for the select element */
+.custom-select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.custom-select select {
+  display: none; /* Hide the default select element */
+}
+
+.select-selected {
+  background-color: #fff;
+  border: 2px solid #6dffe9;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
+
+.select-items div,
+.select-selected {
+  color: #000;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+.select-items {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-weight: bold;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: #f1f1f1;
+}
+
+.select-arrow {
+  position: absolute;
+  top: 16px;
+  right: 10px;
+  pointer-events: none;
+  border: solid #ccc;
+  border-width: 0 3px 3px 0;
+  padding: 3px;
+  transform: rotate(45deg);
+}
+
+.select-selected:after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: 10px;
+  border: solid #ccc;
+  border-width: 0 3px 3px 0;
+  padding: 3px;
+  transform: rotate(45deg);
+}
+
+.select-selected.select-arrow-active:after {
+  transform: rotate(-135deg);
+  top: 8px;
+}
+
+/* smart query page modal  */
+

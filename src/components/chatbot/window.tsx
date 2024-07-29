@@ -78,14 +78,14 @@ export const BotWindow = forwardRef<HTMLDivElement, Props>(
           <div className="flex gap-2">
             <Avatar className="w-10 h-10">
               <AvatarImage
-                src="https://ucarecdn.com/372078a2-48f5-4700-ba0b-d06003d02a53/-/preview/512x512/"
+                src="/images/piyush.jpg"
                 alt="@shadcn"
               />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
             <div className="flex items-start flex-col">
               <h3 className="text-lg font-bold leading-none">
-                Sales Rep - SmartRep AI
+                 Data<span className='text-red-600'>Query</span>AI
               </h3>
               <p className="text-sm">{domainName.split('.com')[0]}</p>
               {realtimeMode?.mode && (
@@ -179,7 +179,7 @@ export const BotWindow = forwardRef<HTMLDivElement, Props>(
           </TabsContent>
         </TabsMenu>
         <div className="flex justify-center ">
-          <p className="text-gray-400 text-xs">Powered By SmartRep AI</p>
+          <p className="text-gray-400 text-xs">Powered By DataQueryAI</p>
         </div>
       </div>
     )
