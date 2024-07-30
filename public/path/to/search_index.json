@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "title": "Home",
+    "content": "Welcome to our homepage. Here you can find the latest updates and features.",
+    "url": "",
+    "tag": "Piyush piyush piy ush",
+    "src": "/images/home.jpg"
+  },
+  {
+    "id": 2,
+    "title": "About Us",
+    "content": "Learn more about our company, our values, and our mission.",
+    "url": "",
+    "tag": "Piyush piyush piy ush rahul",
+    "src": "/images/about.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Services",
+    "content": "Discover the range of services we offer to help you achieve your goals.",
+    "url": "",
+    "tag": "Piyush piyush piy ush",
+    "src": "/images/services.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Contact",
+    "content": "Get in touch with us through our contact page.",
+    "url": "",
+    "tag": "Piyush piyush piy ush",
+    "src": "/images/contact.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Blog",
+    "content": "Read our latest blog posts and articles on various topics.",
+    "url": "",
+    "tag": "Piyush piyush piy ush",
+    "src": "/images/blog.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Team - Ravi",
+    "content": "Ravi is a part of this project Team.",
+    "url": "",
+    "tag": "ravi Ravi Ra JAt jat at",
+    "src": "/images/ravi.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Team - Piyush",
+    "content": "Piyush is a part of this project Team.",
+    "url": "",
+    "tag": "piyush Piyush Pi Yush",
+    "src": "/images/piyush.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Feature - Real-time Collaboration",
+    "content": "Learn about our real-time collaboration features.",
+    "url": "",
+    "tag": "feature collaboration real-time",
+    "src": "/images/collaboration.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Feature - AI Integration",
+    "content": "Explore our AI integration capabilities.",
+    "url": "",
+    "tag": "feature AI integration",
+    "src": "/images/ai-integration.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Blog - How to Use Our Services",
+    "content": "A guide on how to make the most out of our services.",
+    "url": "",
+    "tag": "blog guide services",
+    "src": "/images/blog-how-to.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Blog - Latest Tech Trends",
+    "content": "Stay updated with the latest trends in technology.",
+    "url": "",
+    "tag": "blog tech trends",
+    "src": "/images/tech-trends.jpg"
+  },
+  {
+    "id": 12,
+    "title": "Feature - Secure Payments",
+    "content": "Learn about our secure payment systems.",
+    "url": "",
+    "tag": "feature payments secure",
+    "src": "/images/secure-payments.jpg"
+  },
+  {
+    "id": 13,
+    "title": "Feature - User Analytics",
+    "content": "Explore our user analytics tools.",
+    "url": "",
+    "tag": "feature analytics user",
+    "src": "/images/user-analytics.jpg"
+  },
+  {
+    "id": 14,
+    "title": "Blog - Benefits of AI",
+    "content": "Discover the benefits of integrating AI into your business.",
+    "url": "",
+    "tag": "blog benefits AI",
+    "src": "/images/benefits-ai.jpg"
+  },
+  {
+    "id": 15,
+    "title": "Team - Rahul",
+    "content": "Rahul is a part of this project Team.",
+    "url": "/",
+    "tag": "rahul team member",
+    "src": "/images/rahul.jpg"
+  },
+  {
+    "id": 16,
+    "title": "Feature - Natural Language Processing",
+    "content": "Implementing NLP to understand and process user queries.",
+    "url": "",
+    "tag": "feature NLP natural language processing",
+    "src": "/images/nlp.jpg"
+  },
+  {
+    "id": 17,
+    "title": "Feature - Multi-database Support",
+    "content": "Support for various databases like MySQL, PostgreSQL, MongoDB, and more.",
+    "url": "",
+    "tag": "feature multi-database support",
+    "src": "/images/multi-database.jpg"
+  },
+  {
+    "id": 18,
+    "title": "Feature - Advanced Query Generation",
+    "content": "Generate complex queries easily with our advanced query builder.",
+    "url": "",
+    "tag": "feature advanced query generation",
+    "src": "/images/advanced-query.jpg"
+  },
+  {
+    "id": 19,
+    "title": "Feature - Data Visualization",
+    "content": "Visualize your data with our built-in data visualization tools.",
+    "url": "",
+    "tag": "feature data visualization",
+    "src": "/images/data-visualization.jpg"
+  },
+  {
+    "id": 20,
+    "title": "Feature - Automated Backups",
+    "content": "Ensure your data is safe with our automated backup feature.",
+    "url": "",
+    "tag": "feature automated backups",
+    "src": "/images/automated-backups.jpg"
+  }
+]

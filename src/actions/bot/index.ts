@@ -1,3 +1,4 @@
+// index.ts
 'use server'
 
 import { client } from '@/lib/prisma'
@@ -5,11 +6,10 @@ import { extractEmailsFromString, extractURLfromString } from '@/lib/utils'
 import { onRealTimeChat } from '../conversation'
 import { clerkClient } from '@clerk/nextjs'
 import { onMailer } from '../mailer'
-import OpenAi from 'openai'
+import axios from 'axios'
 
-const openai = new OpenAi({
-  apiKey: process.env.OPEN_AI_KEY,
-})
+const geminiApiKey = process.env.NEXT_PUBLIC_API_GENERATIVE_LANGUAGE_CLIENT
+const geminiApiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${geminiApiKey}`
 
 export const onStoreConversations = async (
   id: string,
@@ -204,49 +204,15 @@ export const onAiChatBotAssistant = async (
           message,
           author
         )
+        
 
-        const chatCompletion = await openai.chat.completions.create({
-          messages: [
-            {
-              role: 'assistant',
-              content: `
-              You will get an array of questions that you must ask the customer.
-
-              Progress the conversation using those questions.
-
-              Whenever you ask a question from the array i need you to add a keyword at the end of the question (complete) this keyword is extremely important.
-
-              Do not forget it.
-
-              only add this keyword when your asking a question from the array of questions. No other question satisfies this condition
-
-              Always maintain character and stay respectfull.
-
-              The array of questions : [${chatBotDomain.filterQuestions
-                .map((questions) => questions.question)
-                .join(', ')}]
-
-              if the customer says something out of context or inapporpriate. Simply say this is beyond you and you will get a real user to continue the conversation. And add a keyword (realtime) at the end.
-
-              if the customer agrees to book an appointment send them this link ${process.env.NEXT_PUBLIC_URL}portal/${id}/appointment/${
-                checkCustomer?.customer[0].id
-              }
-
-              if the customer wants to buy a product redirect them to the payment page ${process.env.NEXT_PUBLIC_URL}portal/${id}/payment/${
-                checkCustomer?.customer[0].id
-              }
-          `,
-            },
-            ...chat,
-            {
-              role: 'user',
-              content: message,
-            },
-          ],
-          model: 'gpt-3.5-turbo',
+        const response = await axios.post(geminiApiUrl, {
+          contents: [{ parts: [{ text: message }] }],
         })
 
-        if (chatCompletion.choices[0].message.content?.includes('(realtime)')) {
+        const content = response.data.candidates[0].content.parts[0].text
+
+        if (content.includes('(realtime)')) {
           const realtime = await client.chatRoom.update({
             where: {
               id: checkCustomer?.customer[0].chatRoom[0].id,
@@ -259,10 +225,7 @@ export const onAiChatBotAssistant = async (
           if (realtime) {
             const response = {
               role: 'assistant',
-              content: chatCompletion.choices[0].message.content.replace(
-                '(realtime)',
-                ''
-              ),
+              content: content.replace('(realtime)', ''),
             }
 
             await onStoreConversations(
@@ -300,10 +263,8 @@ export const onAiChatBotAssistant = async (
           }
         }
 
-        if (chatCompletion) {
-          const generatedLink = extractURLfromString(
-            chatCompletion.choices[0].message.content as string
-          )
+        if (content) {
+          const generatedLink = extractURLfromString(content)
 
           if (generatedLink) {
             const link = generatedLink[0]
@@ -324,7 +285,7 @@ export const onAiChatBotAssistant = async (
 
           const response = {
             role: 'assistant',
-            content: chatCompletion.choices[0].message.content,
+            content,
           }
 
           await onStoreConversations(
@@ -337,31 +298,16 @@ export const onAiChatBotAssistant = async (
         }
       }
       console.log('No customer')
-      const chatCompletion = await openai.chat.completions.create({
-        messages: [
-          {
-            role: 'assistant',
-            content: `
-            You are a highly knowledgeable and experienced sales representative for a ${chatBotDomain.name} that offers a valuable product or service. Your goal is to have a natural, human-like conversation with the customer in order to understand their needs, provide relevant information, and ultimately guide them towards making a purchase or redirect them to a link if they havent provided all relevant information.
-            Right now you are talking to a customer for the first time. Start by giving them a warm welcome on behalf of ${chatBotDomain.name} and make them feel welcomed.
-
-            Your next task is lead the conversation naturally to get the customers email address. Be respectful and never break character
-
-          `,
-          },
-          ...chat,
-          {
-            role: 'user',
-            content: message,
-          },
-        ],
-        model: 'gpt-3.5-turbo',
+      const response = await axios.post(geminiApiUrl, {
+        contents: [{ parts: [{ text: message }] }],
       })
 
-      if (chatCompletion) {
+      const content = response.data.candidates[0].content.parts[0].text
+
+      if (content) {
         const response = {
           role: 'assistant',
-          content: chatCompletion.choices[0].message.content,
+          content,
         }
 
         return { response }

@@ -1,28 +1,19 @@
 import Image from "next/image";
 import React from "react";
+import SearchPagefunction from "./SearchPage";
+import LeftsearchPage from "./searchPageLeft";
 
-const SearchPage = () => {
-    return ( <div className="flex flex-col">
-        <div>
-        <h1 className="font-bold text-2xl ">Blog</h1>
-        <div>
-        <Image src="/images/dash-card-1.jpg" width={150} height={200} alt="icon" />
-        <div></div>
-        </div>
-        </div>
-        <div>
-        <h1>Data Query History</h1>
-        <div>
-        <Image src="/images/dash-card-1.jpg" width={150} height={200} alt="icon" />
-        </div>
-        </div>
-        <div>
-        <h1>Document Page</h1>
-        <div>
-        <Image src="/images/dash-card-1.jpg" width={150} height={200} alt="icon" />
-        </div>
-        </div>
+const SearchPage1 = () => {
+    return ( <div className="flex  flex-col md:flex-row p-3 bg-indigo-100">
+       <div className="min-w-[62vw] bg-white h-[86vh] mr-3 rounded-lg">
+          <div>
+            <LeftsearchPage />
+          </div>
+       </div>
+       <div className="min-w-[29wh] h-[86vh] ">
+        <SearchPagefunction />
+       </div>
     </div> );
 }
  
-export default SearchPage;
+export default SearchPage1;
