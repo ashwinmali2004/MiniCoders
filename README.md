@@ -4,6 +4,11 @@
 
 ![Screenshot](minicoders.png)
 
+### Video Demo 
+#### Team
+- Ashwin (Team member) Voice demo Video [Link](https://www.youtube.com/watch?v=WlMraLCJOuw&t=17s)
+- Michael (Team member ) Voice demo Video [Link](https://youtu.be/lotGu_AA14E?si=TRs0AYCr3i_U-I6c) 
+
 ## Key Features:
 ### Dashboard
 - Centralized control panel to access all features.
