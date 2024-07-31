@@ -92,3 +92,6 @@
 
 ### LLM Model
 - Gemini AI: For advanced generative language capabilities and content generation.
+
+## Team 
+![Screenshot](team.png)
